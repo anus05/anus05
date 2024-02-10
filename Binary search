@@ -1,0 +1,41 @@
+/***********************
+Binary search
+***********************/
+#include<stdio.h>
+int Binary_search(int A[],int n,int k)
+{ 
+		int index=0;
+		int low=1;
+		int mid=0;
+		int high=n;
+		
+		while(low<=high){
+			mid=(low+high)/2;
+			if(k==A[mid])
+			return mid;
+			else if(k<A[mid])
+			high=mid-1;
+			else if(k>A[mid])
+			low=mid+1;
+		}
+		
+	
+}
+	int main(){
+	int n,k,index=0,A[n];
+	int mid;
+		printf("enter the size of an array:");
+		scanf("%d",&n);
+		printf("enter %d elements of an array:\n",n);
+		for(index=0;index<n;index++){
+			scanf("%d",&A[index]);
+		}
+		printf("enter the element to search:");
+		scanf("%d",&k);
+		k=Binary_search(A,n,k);
+		if(k==-1)
+		printf("element not found");
+		else
+		printf("Element is  found at index  : %d in the array",k);
+	 return 0;
+	}
