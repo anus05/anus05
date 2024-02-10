@@ -1,5 +1,5 @@
 /***********************
-Binary search
+Binary search 
 ***********************/
 #include<stdio.h>
 int Binary_search(int A[],int n,int k)
